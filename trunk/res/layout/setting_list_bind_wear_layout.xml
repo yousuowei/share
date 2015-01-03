@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/aci_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_bind_wear_item_height"
+        android:layout_marginLeft="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginRight="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginTop="@dimen/setting_bind_wear_item_margin_t"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/SettingListBindWearText"
+            android:layout_width="@dimen/setting_bind_wear_item_tv_width"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/setting_bind_wear_item_tv_margin_r"
+            android:text="@string/setting_bind_wear_imei" />
+
+        <TextView
+            android:id="@+id/tv_imei"
+            style="@style/SettingListBindWearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_bind_wear_item_height"
+        android:layout_marginLeft="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginRight="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginTop="@dimen/setting_bind_wear_item_margin_b"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/SettingListBindWearText"
+            android:layout_width="@dimen/setting_bind_wear_item_tv_width"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/setting_bind_wear_item_tv_margin_r"
+            android:text="@string/setting_bind_wear_app_phone" />
+
+        <TextView
+            android:id="@+id/tv_app_phone"
+            style="@style/SettingListBindWearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_bind_wear_item_height"
+        android:layout_marginLeft="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginRight="@dimen/setting_bind_wear_item_margin_lf"
+        android:layout_marginTop="@dimen/setting_bind_wear_item_margin_b"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/SettingListBindWearText"
+            android:layout_width="@dimen/setting_bind_wear_item_tv_width"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/setting_bind_wear_item_tv_margin_r"
+            android:text="@string/setting_bind_wear_type" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/SettingListBindWearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_unbind"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bind_bracelet_btn_ok_height"
+            android:layout_marginRight="@dimen/bind_bracelet_btn_ok_margin_center"
+            android:background="@drawable/img_bind_bracelet_btn_bg"
+            android:text="@string/setting_bind_wear_unbind"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/task_add_time_padding_lf"
+    android:paddingRight="@dimen/task_add_time_padding_lf" >
+
+    <kankan.wheel.widget.WheelView
+        android:id="@+id/hour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <kankan.wheel.widget.WheelView
+        android:id="@+id/mins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

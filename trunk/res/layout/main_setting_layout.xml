@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_title_layout" />
+
+    <ListView
+        android:id="@+id/lv_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_setting_margin_lf"
+        android:layout_marginRight="@dimen/main_setting_margin_lf"
+        android:layout_marginTop="@dimen/main_setting_margin_t"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/main_setting_divider" >
+    </ListView>
+
+</LinearLayout>

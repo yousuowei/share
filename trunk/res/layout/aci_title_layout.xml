@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_task_title_height"
+    android:background="@drawable/img_bind_bracelet_color"
+    android:paddingBottom="@dimen/main_task_title_padding_b"
+    android:paddingLeft="@dimen/main_task_title_padding_lr"
+    android:paddingRight="@dimen/main_task_title_padding_lr" >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:src="@drawable/img_back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/main_task_all_list"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_bind_bracelet_bottom_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/aci_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/task_add_tv_margin_b"
+        android:layout_marginTop="@dimen/task_add_tv_margin_t"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/bind_bracelet_tv_margin_lr"
+        android:paddingRight="@dimen/bind_bracelet_tv_margin_lr" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/task_add_tv_margin_b"
+            android:text="@string/main_task_add_name"
+            android:textColor="#787878"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bind_bracelet_ev_height"
+            android:layout_marginBottom="@dimen/task_add_tv_margin_b"
+            android:background="@drawable/img_bind_bracelet_tv_bg"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tv_room_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#787878"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bind_bracelet_btn_ok_height"
+            android:layout_marginRight="@dimen/bind_bracelet_btn_ok_margin_center"
+            android:layout_weight="1"
+            android:background="@drawable/img_bind_bracelet_btn_bg"
+            android:text="@string/room_open"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bind_bracelet_btn_ok_height"
+            android:layout_weight="1"
+            android:background="@drawable/img_bind_bracelet_btn_bg"
+            android:text="@string/common_cancle"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</LinearLayout>

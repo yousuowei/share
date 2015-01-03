@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_setting"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_bg_selector"
+    android:gravity="center"
+    android:paddingBottom="@dimen/main_setting_item_padding_tb"
+    android:paddingTop="@dimen/main_setting_item_padding_tb"
+    android:textColor="@drawable/setting_text_selector"
+    android:textSize="17sp" >
+
+</TextView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="start_bg">#00a99e</color>
+    <color name="bind_wear_select_type_tv_nomal">#ffffff</color>
+    <color name="bind_wear_select_type_tv_select">#4c4c4c</color>
+    <color name="time_text_nomal">#b4b4b4</color>
+    <color name="time_text_select">#ffffff</color>
+    <color name="time_value">#ff9900</color>
+
+</resources>
