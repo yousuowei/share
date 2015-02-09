@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_task_lv_item_height"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_task_lv_item_height" >
+
+        <ImageButton
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_task_lv_item_del_margin"
+            android:background="@drawable/img_task_list_delete"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_task_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_task_lv_item_margin_l"
+            android:layout_toRightOf="@id/iv_delete"
+            android:textSize="23sp" />
+
+        <org.yousuowei.share.ui.view.CheckSwitchButton
+            android:id="@+id/csb_isActive"
+            android:layout_width="@dimen/main_task_lv_item_btn_width"
+            android:layout_height="@dimen/main_task_lv_item_btn_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_task_lv_item_margin_r"
+            android:focusable="false" />
+
+        <ImageButton
+            android:id="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_task_lv_item_margin_r"
+            android:background="@drawable/img_task_list_edit"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_task_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_task_desc"
+            android:layout_below="@id/tv_task_desc"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm_delete"
+        android:layout_width="@dimen/main_task_lv_item_del_confirm_width"
+        android:layout_height="match_parent"
+        android:background="#ff1313"
+        android:gravity="center"
+        android:text="@string/main_task_delete"
+        android:textColor="#ffffff"
+        android:textSize="19sp" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_main"
+    android:layout_width="@dimen/common_dialog_width"
+    android:layout_height="@dimen/common_dialog_height"
+    android:layout_gravity="center"
+    android:background="@drawable/img_bind_bracelet_dialog_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_dialog_padding_tb"
+    android:paddingLeft="@dimen/common_dialog_padding_lr"
+    android:paddingRight="@dimen/common_dialog_padding_lr"
+    android:paddingTop="@dimen/common_dialog_padding_tb" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="@string/setting_upgradingd"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+    <ProgressBar
+        android:id="@+id/pb_speed"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_upgrade_download_height"
+        android:layout_marginTop="@dimen/setting_upgrade_download_margin_t"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/download_progress_layer_list" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="@dimen/bind_bracelet_btn_ok_width"
+            android:layout_height="@dimen/bind_bracelet_btn_ok_height"
+            android:background="@drawable/img_bind_bracelet_btn_bg"
+            android:text="@string/common_cancle"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</LinearLayout>

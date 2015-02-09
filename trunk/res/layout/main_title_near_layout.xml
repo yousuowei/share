@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_task_title_height" >
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/main_task_title_padding_lr"
+        android:clickable="true"
+        android:drawableLeft="@drawable/img_main_task_edit"
+        android:text="@string/main_task_edit"
+        android:textColor="@color/text_normal"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/main_task_all_list"
+        android:textColor="@color/text_normal"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_open_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/main_task_title_padding_lr"
+        android:drawableLeft="@drawable/img_main_task_add"
+        android:text="@string/main_task_add"
+        android:textColor="@color/text_normal"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_gravity="bottom"
+        android:background="@color/common_divider" />
+
+</FrameLayout>
