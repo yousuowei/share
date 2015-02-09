@@ -114,7 +114,8 @@
         <!--
             <meta-data
             android:name="UMENG_APPKEY"
-            android:value="543741a1fd98c554db01d52a" />        -->
+            android:value="543741a1fd98c554db01d52a" />
+        -->
         <!-- 可指定不同渠道自升级 -->
         <meta-data
             android:name="UMENG_CHANNEL"
@@ -141,5 +142,4 @@
             android:process=":remote" >
         </service>
     </application>
-
 </manifest>
