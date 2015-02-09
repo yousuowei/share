@@ -13,14 +13,8 @@ package org.yousuowei.share.ui.aci;
 
 import org.yousuowei.share.R;
 import org.yousuowei.share.common.Api;
-import org.yousuowei.share.common.Constants;
-import org.yousuowei.share.data.entity.VersionInfo;
-import org.yousuowei.share.data.http.HttpEngine;
-import org.yousuowei.share.data.http.result.VersionCheckResult;
 import org.yousuowei.share.utils.Utils;
 
-import com.mipt.clientcommon.BaseResult;
-import com.mipt.clientcommon.HttpCallback;
 import com.squareup.picasso.Picasso;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -41,16 +35,37 @@ import android.widget.ImageView;
 public class StartAci extends BaseAci {
     private ImageView startIv;
 
+    private Runnable nextAciRun;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	checkUpdate();
+    }
+
+    @Override
+    protected void onPause() {
+	super.onPause();
+	m_handler.removeCallbacks(nextAciRun);
+    }
+
+    @Override
+    protected void initView() {
+	setContentView(R.layout.start_layout);
+	startIv = (ImageView) findViewById(R.id.iv_start);
+
+	Picasso.with(m_ctx.get()).load(R.drawable.img_start).into(startIv);
+    }
+
+    @Override
+    protected void initControl() {
 	showDeviceInfo();
+	goNextAci();
+	checkUpdate();
     }
 
     private void checkUpdate() {
-	// 自升级检测
-	UmengUpdateAgent.update(m_ctx.get());
+	UmengUpdateAgent.setUpdateAutoPopup(true);
+	UmengUpdateAgent.silentUpdate(m_ctx.get());
     }
 
     private void showDeviceInfo() {
@@ -68,58 +83,13 @@ public class StartAci extends BaseAci {
 		+ " webUserAgent:" + webUserAgent);
     }
 
-    @Override
-    protected void initView() {
-	super.initView();
-	setContentView(R.layout.start_layout);
-	startIv = (ImageView) findViewById(R.id.iv_start);
-
-	Picasso.with(m_ctx.get()).load(R.drawable.img_start).into(startIv);
-	goNextAci();
-    }
-
     private void goNextAci() {
-	m_handler.postDelayed(new Runnable() {
+	nextAciRun = new Runnable() {
 	    @Override
 	    public void run() {
 		Api.startMainAci(m_ctx.get());
 	    }
-	}, 2000);
-    }
-
-    private void checkVersion() {
-	if (Constants.CHECK_VERSION) {
-	    HttpCallback callback = new CheckVersionHttpCallback();
-	    HttpEngine.requestCheckVersion(m_ctx.get(), callback);
-	}
-    }
-
-    private class CheckVersionHttpCallback extends HttpCallback.SimpleCallback {
-	@Override
-	public void onRequestSuccess(int id, BaseResult result) {
-	    httpGetNewVersion(result);
-	}
-
-	private void httpGetNewVersion(BaseResult result) {
-	    VersionInfo versionInfo = (VersionInfo) ((VersionCheckResult) result)
-		    .getData();
-	    showNewVersion(versionInfo);
-	}
-    }
-
-    private void showNewVersion(VersionInfo versionInfo) {
-	// List<BtnInfo> btnInfos = new ArrayList<CommonDialog.BtnInfo>();
-	// BtnInfo downLoadBtn = new
-	// BtnInfo(R.string.version_dialog_btn_download,
-	// new OnClickListener() {
-	//
-	// @Override
-	// public void onClick(View v) {
-	// // TODO Auto-generated method stub
-	//
-	// }
-	// });
-	//
-	// m_dialog.addContent(content, btnInfos);
+	};
+	m_handler.postDelayed(nextAciRun, 2000);
     }
 }

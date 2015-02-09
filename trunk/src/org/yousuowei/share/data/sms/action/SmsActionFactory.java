@@ -12,7 +12,6 @@
 package org.yousuowei.share.data.sms.action;
 
 import org.yousuowei.share.common.CommonLog;
-import org.yousuowei.share.data.sms.SmsReceiverCallbackEngine;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -68,10 +67,7 @@ public class SmsActionFactory {
 	if (null == action) {
 	    return;
 	}
-	boolean isActionExecute = action.executeAction();
-	if (isActionExecute) {// 只有对收到短信进行了执行操作才进行回调
-	    smsCallback(action);
-	}
+	action.executeAction();
     }
 
     private BaseAction createAction(Context ctx, String actionName,
@@ -80,7 +76,4 @@ public class SmsActionFactory {
 	return action;
     }
 
-    private void smsCallback(BaseAction action) {
-	SmsReceiverCallbackEngine.getInstance().callback(action);
-    }
 }

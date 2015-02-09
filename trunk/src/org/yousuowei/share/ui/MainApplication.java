@@ -49,6 +49,7 @@ public class MainApplication extends Application {
 	initLoaction();
     }
 
+
     private void initSmsReciver() {
 	ContentResolver resolver = getContentResolver();
 	SMSObserver observer = new SMSObserver(null, getApplicationContext());
